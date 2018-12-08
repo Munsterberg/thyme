@@ -5,3 +5,13 @@ itsdangerous==1.1.0
 jinja2==2.10
 markupsafe==1.1.0
 werkzeug==0.14.1
+-i https://pypi.org/simple
+click==7.0
+flask-sqlalchemy==2.3.2
+flask==1.0.2
+itsdangerous==1.1.0
+jinja2==2.10
+markupsafe==1.1.0
+psycopg2==2.7.6.1
+sqlalchemy==1.2.14
+werkzeug==0.14.1
