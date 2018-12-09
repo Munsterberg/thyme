@@ -11,6 +11,18 @@ class TestUserService(BaseTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(data["status"], "success")
 
+    def test_add_user(self):
+        with self.client:
+            response = self.client.post(
+                "/users",
+                data=json.dumps({"username": "testuser", "email": "test@test.com"}),
+                content_type="application/json",
+            )
+            data = json.loads(response.data.decode())
+            self.assertEqual(response.status_code, 201)
+            self.assertIn(data["message"], "test@test.com was added.")
+            self.assertIn(data["status"], "success")
+
 
 if __name__ == "__main__":
     unittest.main()
